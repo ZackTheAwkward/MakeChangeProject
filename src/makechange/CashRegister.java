@@ -48,22 +48,25 @@ public class CashRegister {
 			System.out.println("The change in $1 is " + change1);
 			changeDue = changeDue % 1;
 
+			
+			
 			changeDue = changeDue * 100;
-			int changeQuart = (int) changeDue / 25;
+			changeDue = Math.round(changeDue); 
+			int changeQuart = (int)changeDue / 25;
 			System.out.println("The change in quarters is " + (int) changeQuart);
 			changeDue = changeDue % 25;
 
-			int changeDimes = (int) changeDue / 10;
+			int changeDimes = (int)changeDue / 10;
 			System.out.println("The change in dimes is " + (int) changeDimes);
 			changeDue = changeDue % 10;
 
-			int changeNickels = (int) changeDue / 5;
+			int changeNickels = (int)changeDue / 5;
 			System.out.println("The change in nickels is " + (int) changeNickels);
 			changeDue = (int) changeDue % 5;
 
-			int changePennies = (int) changeDue / 1;
+			int changePennies = (int)changeDue / 1;
 			System.out.println("The change in pennies is " + (int) changePennies);
-			changeDue = changeDue % 1;
+			changeDue = changeDue % 1.0;
 
 		}
 		scanner.close();
